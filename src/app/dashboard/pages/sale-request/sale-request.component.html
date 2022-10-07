@@ -1,0 +1,61 @@
+
+<div class="iconBack">
+    <i class="bi bi-arrow-left" (click)="comeBack()"></i>
+</div>
+
+<form [formGroup]="myform" autocomplete="off" (ngSubmit)="sendRequest()" >
+      <h1>{{ 'app.cart.form-request.h1' | translate }}</h1>
+
+      <div class="infoShipping">
+            <p> <span>{{ 'app.cart.form-request.note' | translate }} </span> {{ 'app.cart.form-request.info-text' | translate }} </p>
+      </div>
+      
+      <!-- Name field -->
+      <h5>{{ 'app.cart.form-request.label-name' | translate }}</h5>
+      <input type="text"
+            formControlName="name"
+            placeholder="Tu Nombre"
+      >
+      <span class="form-text text-danger"
+            *ngIf="validField('name')"
+      >{{ 'app.cart.form-request.span-name' | translate }}</span>
+
+      <h5>{{ 'app.cart.form-request.label-lastname' | translate }}</h5>
+      <input type="text"
+            formControlName="lastname"
+            placeholder="Tus Apellidos"
+      >
+      <span class="form-text text-danger"
+            *ngIf="validField('lastname')"
+      >{{ 'app.cart.form-request.span-lastname' | translate }}</span>
+
+      <!-- Celular field -->
+      <h5>{{ 'app.cart.form-request.label-mobile' | translate }}</h5>
+      <input type="tel"
+            formControlName="mobile"
+            placeholder="Tu Celular"
+      >
+      <span class="form-text text-danger"
+            *ngIf="validField('mobile')"
+      >{{ 'app.cart.form-request.span-mobile' | translate }}</span>
+
+
+      <!-- Address field -->
+      <h5>{{ 'app.cart.form-request.label-address' | translate }}</h5>
+      <textarea rows="2"
+              class="mb-2"
+              formControlName="address"
+           
+      ></textarea>
+      <span class="form-text text-danger"
+            *ngIf="validField('address')"
+      >{{ 'app.cart.form-request.span-address' | translate }}</span>
+
+      <button class="btn btn-primary"
+              [disabled]="myform.invalid"
+              type="submit"
+      >
+       {{ 'app.cart.form-request.button-send' | translate }}
+      </button>
+
+</form>

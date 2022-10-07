@@ -1,0 +1,40 @@
+
+/* .modal {
+    padding: 15px;
+    position: fixed;
+    top: 50vh;
+    left: 40vw;
+    height: 280px;
+    width: 300px;
+} */
+
+/* Modal */
+
+.divBody {
+    display: flex;
+}
+
+.imgModal {
+    max-height: 130px;
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+@media (min-width: 768px) { 
+    .imgModal {
+        max-height: 150px;
+        max-width: 120px;
+    }
+}
+@media (min-width: 1024px) { 
+    .imgModal {
+        max-height: 190px;
+        max-width: 160px;
+    }
+}
+
+.modal-header .shut{
+    border: none;
+    background-color: red;
+    color: white;
+}

@@ -1,0 +1,70 @@
+
+
+.divNav {
+    background-color: #00b4d8;
+}
+
+/* Language */
+
+.divLanguage {
+    display: flex;
+    position: absolute;
+    right: 1%;
+    height: 35px;
+    padding-top: 2px;
+}
+.divLanguage i {
+    font-size: 20px;
+    /* margin-bottom: 10px; */
+    /* padding-bottom: 5px; */
+}
+.divLanguage .lang {
+    cursor: pointer;
+    display: flex;
+    margin-left: 10px;
+    align-items: center;
+    justify-content: center;
+}
+/* .divLanguage .lang span {
+    padding-left: 10px;
+} */
+.divLanguage .lang:hover {
+    background-color: #04829b;
+}
+/* End Language */
+
+
+ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0px 10px;
+    padding: 0px;
+    width: 100vw;
+}
+@media (min-width: 680px) { 
+    ul {
+        float: none;
+        justify-content: center;
+        margin: 0px 0px;
+
+    }
+}
+.link {
+    margin-right: 5px;
+}
+.link:hover,
+.link:active {
+    background-color: rgb(16, 164, 150);
+}
+ul li {
+    cursor: pointer;
+    color: black;
+    font-size: 16px;
+    list-style: none;
+    padding: 3px;
+}
+@media (min-width: 680px) { 
+    ul li {
+        padding: 8px;
+    }
+}

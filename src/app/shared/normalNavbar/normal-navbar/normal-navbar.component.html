@@ -1,0 +1,49 @@
+
+<nav class="divNav">
+
+    <ul 
+        
+    >
+        <div class="link"
+             routerLink="/dashboard/home"
+             routerLinkActive="active"
+        ><li>{{ 'app.shared.navbar.home' | translate }} </li>
+        </div>
+
+        <div class="link"
+             routerLink="/dashboard/categories"
+             routerLinkActive="active"
+        ><li>{{ 'app.shared.navbar.categories' | translate }} </li>
+        </div>
+
+        <div class="link"
+             routerLink="/auth/login"
+             routerLinkActive="active"
+        ><li>{{ 'app.shared.navbar.login' | translate }} </li>
+        </div>
+
+        <div class="link"
+             routerLink="/auth/register"
+             routerLinkActive="active"
+        ><li>{{ 'app.shared.navbar.register' | translate }} </li>
+        </div>
+
+        <div class="link"
+             routerLink="/user/profile"
+             routerLinkActive="active"
+        ><li>{{ 'app.shared.navbar.profile' | translate }} </li>
+        </div>
+
+
+        <hr>
+    
+        <div class="divLanguage">
+            <i class="bi bi-translate"></i>
+            <div class="lang" *ngFor="let lang of supportLanguages" (click)="selectLang(lang)" >
+                <span>{{lang | uppercase }}</span>
+            </div>
+        </div>
+    </ul>
+
+</nav>
+<!-- <span> {{ 'app.shared.language.title' | translate }} </span> -->
